@@ -1,5 +1,7 @@
 module.exports = {
-    images: {
-        unoptimized: true,
-    },
+  assetPrefix: "/blog/",
+  basePath: "/blog",
+  images: {
+    unoptimized: true
+},
 }

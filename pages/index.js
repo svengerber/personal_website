@@ -49,7 +49,7 @@ export default function Home({ posts }) {
                 width={540}
                 height={300}
                 alt={frontmatter.title}
-                src={`/${frontmatter.coverImage}`}
+                src={`/blog/${frontmatter.coverImage}`}
               />
               <h1>{frontmatter.title}</h1>
             </a>
