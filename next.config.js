@@ -14,6 +14,9 @@ if (isGithubActions) {
   module.exports = {
     assetPrefix: assetPrefix,
     basePath: basePath,
+    images: {
+        unoptimized: true,
+    },
   }
 
 }
@@ -22,5 +25,8 @@ else {
     module.exports = {
         assetPrefix: undefined,
         basePath: undefined,
+        images: {
+            unoptimized: true,
+        },
       }
 }
