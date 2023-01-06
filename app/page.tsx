@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { FC } from "react";
 import { use } from "react";
 import { getPosts } from "../lib/posts";
 import Image from "next/image";
@@ -17,7 +17,7 @@ const shortify = (text: string, maxLength = 60) => {
   return text.substring(0, maxLength) + " ...";
 }
 
-const Page: NextPage = () => {
+const Page: FC = () => {
   const posts = use(getInitialPosts());
   
   return (
