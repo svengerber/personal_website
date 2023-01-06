@@ -1,7 +1,13 @@
-module.exports = {
-  assetPrefix: "/blog/",
-  basePath: "/blog",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true
+  },
   images: {
-    unoptimized: true
-},
+    dangerouslyAllowSVG: true,
+  },
+  reactStrictMode: true,
+  swcMinify: true,
 }
+
+module.exports = nextConfig
