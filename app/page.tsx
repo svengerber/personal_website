@@ -27,12 +27,12 @@ const Page: FC = () => {
       <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
         {posts.map(post => (
           <Link key={post.slug} href={`/posts/${post.slug}`} className="group">
-            <div className="relative aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+            <div className="relative aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-6">
               <Image
                 fill
                 src={post.coverImage}
                 alt={""}
-                className="h-full w-full object-cover object-center group-hover:opacity-75"
+                className="h-full w-full object-cover object-center group-hover:opacity-75 hover:scale-110 ease-in duration-100"
               />
             </div>
             <h3 className="mt-4 text-sm text-gray-700">{post.title}</h3>
