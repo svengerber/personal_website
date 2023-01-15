@@ -1,0 +1,35 @@
+---
+import PageMeta from "../components/PageMeta.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<PageLayout>
+  <PageMeta title={`${SITE_TITLE} | About`} slot="meta" />
+  <Fragment slot="main">
+    <section class="mb-8">
+        <div class="mb-4">
+          <h1
+            class="font-extrabold text-3xl md:text-4xl tracking-tight pt-4 pb-2 overflow-hidden"
+          >
+          <div>
+            <span
+            class="bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent"
+            >
+            About this website
+            </span>
+            </div>
+          </h1>
+          <p>Welcome to my personal blog, where I focus on sharing my knowledge and experiences using open source technologies, platform and network engineering.</p>
+          <br>
+          <p>I created this blog to document my journey as a system engineer, with a focus on leveraging cutting-edge technologies to build scalable, reliable and secure systems. 
+            Here you will find a variety of content, including tutorials, tips, and personal reflections on my journey as a system engineer.</p>
+          <br>
+          To get my feet wet with modern web development, I built this blog using <a href="https://astro.build">Astro</a>, <a href="https://svelte.dev">Svelte</a>, <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://github.com/svengerber/personal_website">open sourced</a> it.
+          <br>
+          <br>
+          <p>Thank you for visiting my blog, and I hope you find the content here informative and helpful. Happy engineering! 🛠️</p>
+        </div>
+      </section>
+  </Fragment>
+</PageLayout>
