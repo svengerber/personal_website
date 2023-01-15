@@ -11,6 +11,9 @@ const blogBase = z.object({
     invalid_type_error:
       "date must be written in yyyy-mm-dd format without quotes: For example, Jan 22, 2000 should be written as 2000-01-22.",
   }),
+  tags: z.array(z.string()).nonempty({
+    message: "At least on tag is required"
+  })
 });
 
 const blogMarkdown = blogBase.extend({
