@@ -3,5 +3,10 @@ const { name, href } = Astro.props;
 ---
 
 <div>
-    <a href={href}>{name}</a>
+<a
+  href={href}
+  class="unset animated-link font-bold bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent"
+>
+    {name}
+</a>
 </div>
