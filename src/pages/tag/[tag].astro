@@ -4,6 +4,7 @@ import { blog } from "../../lib/markdoc/frontmatter.schema";
 import PageLayout from "../../layouts/PageLayout.astro";
 import PageMeta from "../../components/PageMeta.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import TagBox from "../../components/TagBox.astro";
 
 
 export async function getStaticPaths() {
@@ -44,7 +45,14 @@ const sortedPosts = posts
 <PageLayout>
   <PageMeta title={`Tags | ${tag}`} slot="meta" />
   <section slot="main">
-    <p class="text-2xl pb-4">Posts with tag {tag}</p>
+    <div class="flex flex-wrap gap-3 items-center pb-4">
+      <div>
+        <p class="text-2xl ">Posts with tag</p>
+      </div>
+      <div> 
+        <TagBox name={tag}/>
+      </div>
+    </div>
     <ul>
       <ul>
         {

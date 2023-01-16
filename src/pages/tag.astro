@@ -15,6 +15,7 @@ const uniqueTags = [...new Set(posts
   .filter((post) => post.frontmatter.draft !== true)
   .map((post) => post.frontmatter.tags)
   .flat()
+  .sort()
 )];
 
 ---
@@ -22,8 +23,10 @@ const uniqueTags = [...new Set(posts
 <PageLayout>
   <PageMeta title={`${SITE_TITLE} | Tags`} slot="meta" />
   <section slot="main">
-    {uniqueTags.map((tag) => (
-      <TagBox href={`${import.meta.env.BASE_URL}tag/${tag}`} name={tag}></TagBox>
-    ))}
+    <div class="flex flex-wrap gap-3">
+      {uniqueTags.map((tag) => (
+        <TagBox href={`${import.meta.env.BASE_URL}tag/${tag}`} name={tag}></TagBox>
+      ))}
+    </div>
   </section>
 </PageLayout>
