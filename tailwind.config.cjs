@@ -31,6 +31,7 @@ module.exports = {
         },
         bg: {
           body: "rgb(var(--color-bg-body) / <alpha-value>)",
+          item: "rgb(var(--color-bg-item) / <alpha-value>)",
           code: "rgb(var(--color-bg-code) / <alpha-value>)",
           selection: "rgb(var(--color-bg-selection) / <alpha-value>)",
         },

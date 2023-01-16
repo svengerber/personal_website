@@ -53,13 +53,11 @@ const sortedPosts = posts
         <TagBox name={tag}/>
       </div>
     </div>
-    <ul>
-      <ul>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-8">
         {
           sortedPosts.map((post) => 
             <BlogPostPreview post={post}/>
         )}
-      </ul>
-    </ul>
+    </div>
   </section>
 </PageLayout>

@@ -21,13 +21,13 @@ const sortedPosts = posts
 ---
 
 <PageLayout>
-  <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
+  <PageMeta title={`${SITE_TITLE} | Blog`} slot="meta" />
   <section slot="main">
-    <ul>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-8">
       {
         sortedPosts.map((post) => 
           <BlogPostPreview post={post}/>
       )}
-    </ul>
+    </div>
   </section>
 </PageLayout>

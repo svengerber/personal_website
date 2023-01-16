@@ -13,7 +13,10 @@ const blogBase = z.object({
   }),
   tags: z.array(z.string()).nonempty({
     message: "At least on tag is required"
-  })
+  }),
+  thumbnail: z.string({
+    invalid_type_error: "title must be a string",
+  }).optional().default(`placeholder.jpg`).transform((val) => `${import.meta.env.BASE_URL}images/${val}`)
 });
 
 const blogMarkdown = blogBase.extend({

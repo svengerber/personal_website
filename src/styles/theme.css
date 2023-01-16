@@ -38,6 +38,8 @@
 
     /* white */
     --color-bg-body: 255 255 255;
+    /* white */
+    --color-bg-item: 255 255 255;
     /* tailwind orange-50 */
     --color-bg-code: 255 247 237;
     /* tailwind amber-200 */
@@ -80,6 +82,8 @@
 
     /* #0e141b */
     --color-bg-body: 14 20 27;
+    /* #0e141b */
+    --color-bg-item: 34 40 47;
     /* yellow-500 */
     --color-bg-code: 234 179 8;
     /* tailwind yellow-300 */
