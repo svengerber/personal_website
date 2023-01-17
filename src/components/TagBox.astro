@@ -4,10 +4,7 @@ const { name, href } = Astro.props;
 
 <div class="bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 rounded-full p-0.5">
     <div class="bg-bg-body py-0 rounded-full px-3">
-        <a
-        href={href}
-        class="unset hover:text-text-link bg-clip-text"
-        >
+        <a href={href} class="hover:text-text-link bg-clip-text whitespace-nowrap">
             {name}
         </a>
     </div>
