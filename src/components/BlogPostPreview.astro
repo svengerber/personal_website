@@ -11,11 +11,13 @@ const formattedDate = new Date(
 });
 ---
 
-<a href={`${import.meta.env.BASE_URL}blog/${post.slug}`}
-  class="transition-all duration-50 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl rounded-xl overflow-hidden bg-bg-item"
->
 
-  <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} width="360" height="192">
+<a href={`${import.meta.env.BASE_URL}blog/${post.slug}`}
+  class="transition-all duration-50 ease-in-out h-full relative top-0 hover:-top-2 shadow-lg hover:shadow-xl rounded-xl overflow-hidden bg-bg-item"
+>
+  <div class="">
+    <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} class="object-cover">
+  </div>
   <div class="py-6 px-8">
     <h2 class="font-bold text-2xl leading-tight">
       {post.frontmatter.title}
