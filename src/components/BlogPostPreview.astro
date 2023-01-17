@@ -1,14 +1,18 @@
 ---
+import { getReadingTime } from "../lib/readingtime";
+
+
 const { post } = Astro.props;
 
 const formattedDate = new Date(
     post.frontmatter.date
     ).toLocaleDateString(
-        "en-us", {
+        "de-ch", {
             year: "numeric",
             month: "short",
             day: "numeric",
 });
+
 ---
 
 
@@ -19,13 +23,13 @@ const formattedDate = new Date(
     <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} class="object-cover">
   </div>
   <div class="py-6 px-8">
-    <h2 class="font-bold text-2xl leading-tight">
+    <h2 class="font-bold text-2xl leading-tight pb-2">
       {post.frontmatter.title}
     </h2>
     <div class="text-text-muted text-sm italic">
       <time datetime={post.frontmatter.date.toISOString()}>
-        {formattedDate}
-      </time>
+        {formattedDate}  | {getReadingTime(post.rawString)} minutes to read
+      </time> 
     </div>
   </div>
 </a>
