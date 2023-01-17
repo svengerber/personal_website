@@ -27,33 +27,3 @@ const formattedDate = new Date(
     </div>
   </div>
 </a>
-
-<!--
-  OLD Variant
-<div class="title">
-  {post.frontmatter.external ? (
-    <a
-      href={post.frontmatter.url}
-      target="_blank"
-      class="unset hover:text-text-link"
-    >
-      <span>{post.frontmatter.title}</span>
-      <span>
-        <i class="ml-1 text-[12px] fa-solid fa-up-right-from-square" />
-      </span>
-    </a>
-  ) : (
-    <a
-      href={`${import.meta.env.BASE_URL}blog/${post.slug}`}
-      class="unset hover:text-text-link"
-    >
-      {post.frontmatter.title}
-    </a>
-  )}
-</div>
-<div class="text-text-muted text-sm italic">
-  <time datetime={post.frontmatter.date.toISOString()}>
-    {formattedDate}
-  </time>
-</div>
--->

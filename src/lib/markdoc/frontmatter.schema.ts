@@ -20,31 +20,9 @@ const blogBase = z.object({
 });
 
 const blogMarkdown = blogBase.extend({
-  external: z.literal(false),
   description: z.optional(z.string()),
   ogImagePath: z.optional(z.string()),
   canonicalUrl: z.optional(z.string()),
 });
 
-const blogExternal = blogBase.extend({
-  external: z.literal(true),
-  url: z.string({
-    required_error:
-      "external is true but url is missing. url must be set for posts marked as external.",
-    invalid_type_error: "external should be string.",
-  }),
-});
-
-/*
-  Blog posts could be of two types —
-  1. The posts you write in markdown files in content/blog/*.md
-  2. External posts in other websites
-
-  That's why we the frontmatter schema for blog posts is one of the two possible types.
-  If you don't want to link posts written in external websites, you could
-  just export blogMarkdown as your blog schema.
-*/
-export const blog = z.discriminatedUnion("external", [
-  blogMarkdown,
-  blogExternal,
-]);
+export const blog = blogMarkdown;
