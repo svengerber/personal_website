@@ -24,14 +24,14 @@ if (typeof slug !== "string") {
   throw Error(`slug should be string. Received: ${slug}`);
 }
 
-const { content, frontmatter } = await readOne({
+const { content, frontmatter, rawString } = await readOne({
   directory: "blog",
   slug,
   frontmatterSchema: blog,
 });
 ---
 
-<ContentLayout title={frontmatter.title} date={frontmatter.date}>
+<ContentLayout title={frontmatter.title} date={frontmatter.date} rawString={rawString} tags={frontmatter.tags}>
   <BlogPostMeta
     title={frontmatter.title}
     description={frontmatter.description}

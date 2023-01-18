@@ -1,5 +1,5 @@
 <script>
-    const messages = ["Hi", "Hello", "Hola", "Hey there","Welcome"]
+    const messages = ["Hi", "Hello", "Hola", "Hey there"]
     const greeting = messages[(Math.floor(Math.random() * messages.length))];
 </script>
 
