@@ -201,3 +201,7 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+.fa-rss::before {
+  content: "\f09e";
+}

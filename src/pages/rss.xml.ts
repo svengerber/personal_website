@@ -27,7 +27,7 @@ export const get = async () => {
     const title = frontmatter.title;
     const pubDate = frontmatter.date;
     const description = frontmatter.description;
-    const link = `${baseUrl}/blog/${slug}`;
+    const link = `${baseUrl + import.meta.env.BASE_URL}blog/${slug}`;
 
     return {
       title,
