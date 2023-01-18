@@ -1,7 +1,7 @@
 {
-    "name": "Blogster theme sleek",
-    "short_name": "Blogster sleek",
-    "start_url": "https://blogster-sleek.netlify.app", 
+    "name": "Sven Gerber | Personal website",
+    "short_name": "personal website",
+    "start_url": "../index.html", 
     "icons": [
         {
             "src": "/favicon/android-chrome-192x192.png",

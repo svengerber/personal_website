@@ -17,9 +17,9 @@ const { title, description } = Astro.props;
 const { meta, og, twitter } = getPageMeta({
   title: title || SITE_TITLE,
   description: description || SITE_DESCRIPTION,
-  baseUrl: SITE_URL,
-  ogImageAbsoluteUrl: `${SITE_URL}/images/og.png`,
-  ogImageAltText: "My fancy website",
+  baseUrl: SITE_URL + import.meta.env.BASE_URL,
+  ogImageAbsoluteUrl: SITE_URL + import.meta.env.BASE_URL + "images/share.png",
+  ogImageAltText: "Sven Gerber | Personal website",
   ogImageWidth: 1200,
   ogImageHeight: 627,
   siteOwnerTwitterHandle: TWITTER_HANDLE,
