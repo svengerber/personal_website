@@ -14,7 +14,7 @@ const LIVE_SITE = "https://svengerber.github.io";
 const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
 let BASE_SITE = LOCALHOST_URL;
-let BASE_PATH = "/personal_website"; //GitHub Repo Name  // Clear if custom domain
+let BASE_PATH = "/personal_website"; //GitHub Repo Name  // Empty if custom domain
 
 // When you're building your site in local or in CI, you could just set your URL manually
 if (isBuild) {
