@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import image from "@astrojs/image";
 
 //Frameworks
 import svelte from "@astrojs/svelte";
@@ -21,6 +22,8 @@ if (isBuild) {
 }
 
 // https://astro.build/config
+
+// https://astro.build/config
 export default defineConfig({
   server: {
     port: SERVER_PORT
@@ -31,5 +34,9 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), svelte()]
+  }), 
+  svelte(), 
+  image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  })]
 });

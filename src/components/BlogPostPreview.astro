@@ -1,5 +1,6 @@
 ---
 import { getReadingTime } from "../lib/readingtime";
+import { Picture } from '@astrojs/image/components';
 
 
 const { post } = Astro.props;
@@ -19,8 +20,8 @@ const formattedDate = new Date(
 <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`}
   class="transition-all duration-50 ease-in-out h-full relative top-0 hover:-top-2 shadow-lg hover:shadow-xl rounded-xl overflow-hidden bg-bg-item"
 >
-  <div class="">
-    <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} class="object-cover">
+  <div class="object-fit">
+    <Picture src={post.frontmatter.thumbnail} alt={post.frontmatter.title} widths={[400, 800, 1500]} sizes="(max-width: 767px) 100vw, 736px" aspectRatio="5:3"/>
   </div>
   <div class="py-6 px-8">
     <h2 class="font-bold text-2xl leading-tight pb-2">
