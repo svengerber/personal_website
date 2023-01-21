@@ -11,7 +11,7 @@ I recently was able to setup my ISP router at home with IPv6.
 Therefore I thought I would like to make my "home/cloud" lab at Hetzner IPv6 ready.
 
 ## Default IPv6 from Hetzner
-By default you will receive a /64 subnet from Hetzner allocated to you dedicated server.
+By default you will receive a /64 subnet from Hetzner allocated to your dedicated server.
 In most cases that's enough, but if you have virtual machines running on your server you likely want to have multiple subnets for your network zones.
 
 It's theoretically possible to just use the /64 subnet an split it up in smaller subnets like /96 for your different network zones.
