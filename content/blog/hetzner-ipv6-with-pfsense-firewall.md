@@ -34,7 +34,7 @@ See: [Hetzner Docs](https://docs.hetzner.com/robot/dedicated-server/ip/additiona
 ![IPv6 WAN interface config](/personal_website/images/hetzner-ipv6-wan-interface.png)
 
 On the LAN interface you can now use IP addresses from your custom /56 subnet.
-This means, that you can use the four hexadecimal digits (AAAA:BBBB:CCCC:**XXXX**::) for a total of **65'536 /64 subnets**. 😅
+This means, that you can use the four hexadecimal digits (AAAA:BBBB:CCCC:DD**XX**::) for a total of **256 /64 subnets**.
 ![IPv6 WAN interface config](/personal_website/images/hetzner-ipv6-lan-interface.png)
 
 Don't forget to check if router advertisements (RAs) are enabled, so that your clients can use SLAAC to generate an IPv6 address.
