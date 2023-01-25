@@ -59,6 +59,29 @@ const formattedDate = new Date(date).toLocaleDateString("de-ch", {
         </div>
         <slot name="content" />
       </section>
+        <p><strong>Share this post: </strong>
+          <a class="unset text-2xl ml-2 hover:text-text-link" href={`https://www.linkedin.com/sharing/share-offsite/?url=${Astro.request.url}`}>
+            <i
+            class="fa-brands fa-linkedin"
+            aria-hidden="true"
+            title="Share on LinkedIn">
+            </i>
+          </a>
+          <a class="unset text-2xl ml-2 hover:text-text-link" href={`http://twitter.com/share?text=${title}&url=${Astro.request.url}`}>
+            <i
+            class="fa-brands fa-twitter"
+            aria-hidden="true"
+            title="Share on Twitter">
+            </i>
+          </a>
+          <a class="unset text-2xl ml-2 hover:text-text-link" href={`mailto:?subject=${title}&body=${Astro.request.url}`}>
+            <i
+            class="fa-solid fa-envelope"
+            aria-hidden="true"
+            title="Share by email">
+            </i>
+          </a>
+        </p>
     </main>
     <Footer />
     <style>
