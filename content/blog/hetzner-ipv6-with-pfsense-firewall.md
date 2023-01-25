@@ -25,17 +25,17 @@ Currently it's not possible to order the IPv6 subnet directly from the portal, s
 After receiving the IPv6 subnet, you have to assign the pfSense WAN Interface MAC address to the subnet in the Hetzner Robot.
 It's the same procedure as for IPv4.
 In my case I assigned both subnets to the pfSense, because i don't need IPv6 for my hypervisor.
-![IPv6 assignment to mac](/personal_website/images/hetzner-ipv6-mac-assignment.png)
+![IPv6 assignment to mac](/images/hetzner-ipv6-mac-assignment.png)
 
 ## pfSense configuration
 On the WAN interface I configured a static IP (AAAA:AAAA:AAAA:AAAA::1/128) from my /64 subnet for IPv6 connectivity of the firewall itself.
 The link-local IP fe80::1 needs to be configured as default gateway, because Hetzner uses this IP on their side.
 See: [Hetzner Docs](https://docs.hetzner.com/robot/dedicated-server/ip/additional-ip-adresses/#gateway)
-![IPv6 WAN interface config](/personal_website/images/hetzner-ipv6-wan-interface.png)
+![IPv6 WAN interface config](/images/hetzner-ipv6-wan-interface.png)
 
 On the LAN interface you can now use IP addresses from your custom /56 subnet.
 This means, that you can use the four hexadecimal digits (AAAA:BBBB:CCCC:DD**XX**::) for a total of **256 /64 subnets**.
-![IPv6 WAN interface config](/personal_website/images/hetzner-ipv6-lan-interface.png)
+![IPv6 WAN interface config](/images/hetzner-ipv6-lan-interface.png)
 
 Don't forget to check if router advertisements (RAs) are enabled, so that your clients can use SLAAC to generate an IPv6 address.
 
@@ -44,4 +44,4 @@ Older OS may not support RDNSS ([RFC 8106](https://www.rfc-editor.org/rfc/rfc810
 If that is the case, a DHCPv6 server needs to be configured or the clients can use the IPv4 DNS server for resolution.
 
 Here's an example using SLAAC with DNS servers from Cloudflare and Google:
-![IPv6 LAN interface ra and rdnss](/personal_website/images/hetzner-ipv6-lan-interface-ra.png)
+![IPv6 LAN interface ra and rdnss](/images/hetzner-ipv6-lan-interface-ra.png)
