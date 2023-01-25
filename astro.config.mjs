@@ -10,11 +10,11 @@ import svelte from "@astrojs/svelte";
 // Hosting URL Config 
 const SERVER_PORT = 3000;
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
-const LIVE_SITE = "https://svengerber.github.io";
+const LIVE_SITE = "https://www.gerber.uno";
 const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
 let BASE_SITE = LOCALHOST_URL;
-let BASE_PATH = "/personal_website"; //GitHub Repo Name  // Empty if custom domain
+let BASE_PATH = ""; //GitHub Repo Name  // Empty if custom domain
 
 // When you're building your site in local or in CI, you could just set your URL manually
 if (isBuild) {
